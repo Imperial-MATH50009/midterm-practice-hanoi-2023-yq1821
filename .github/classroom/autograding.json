@@ -1,0 +1,104 @@
+{
+  "tests": [
+    {
+      "name": "setup",
+      "setup": "sudo -H pip3 install setuptools pytest pytest-timeout flake8 pep8-naming flake8-docstrings",
+      "run": "python3 -m pip install numpy",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "part-1-install",
+      "setup": "python3 -m pip install -U pip",
+      "run": "python3 -m pip install -e .",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 2
+    },
+    {
+      "name": "part-2-1",
+      "setup": "",
+      "run": "pytest -k 'not test_stack' tests/test_part_2.py::test_hanoi_import",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 2
+    },
+    {
+      "name": "part-2-2",
+      "setup": "",
+      "run": "pytest tests/test_part_2.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "part-3",
+      "setup": "",
+      "run": "pytest tests/test_part_3.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 3
+    },
+    {
+      "name": "part-4-legal-move",
+      "setup": "",
+      "run": "pytest tests/test_part_4.py::test_standard_move",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 3
+    },
+    {
+      "name": "part-4-error-1",
+      "setup": "",
+      "run": "pytest tests/test_part_4.py::test_empty_move",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 2
+    },
+    {
+      "name": "part-4-error-2",
+      "setup": "",
+      "run": "pytest tests/test_part_4.py::test_wrong_size_move",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 2
+    },
+    {
+      "name": "part-4-game-state",
+      "setup": "",
+      "run": "pytest tests/test_part_4.py::test_game_state",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "part-5",
+      "setup": "",
+      "run": "python3 -m flake8 hanoi/",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 2
+    }
+  ]
+}
